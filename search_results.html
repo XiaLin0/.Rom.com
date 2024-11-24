@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>搜索结果</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif; /* 设置字体 */
+            margin: 0; /* 清除默认外边距 */
+            padding: 0; /* 清除默认内边距 */
+            background-color: #f4f4f4; /* 背景颜色 */
+        }
+        header {
+            background-color: #007acc; /* 头部背景颜色 */
+            color: white; /* 头部文字颜色 */
+            padding: 1rem; /* 内边距 */
+            text-align: center; /* 居中对齐 */
+        }
+        .back-button {
+            display: inline-block; /* 块状元素 */
+            margin: 0.5rem 0; /* 外边距 */
+            padding: 0.5rem 1rem; /* 内边距 */
+            background-color: #007acc; /* 按钮背景色 */
+            color: white; /* 按钮文字颜色 */
+            text-decoration: none; /* 去掉下划线 */
+            border-radius: 5px; /* 边框圆角 */
+        }
+        .search-results {
+            margin: 2rem;
+        }
+        .result-button {
+            display: inline-block; /* 块状元素 */
+            margin: 0.5rem 0; /* 外边距 */
+            padding: 0.5rem 1rem; /* 内边距 */
+            background-color: #007acc; /* 按钮背景色 */
+            color: white; /* 按钮文字颜色 */
+            text-decoration: none; /* 去掉下划线 */
+            border-radius: 5px; /* 边框圆角 */
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>搜索结果</h1> <!-- 网站标题 -->
+        <a href="javascript:history.back()" class="back-button">返回</a> <!-- 返回按钮 -->
+    </header>
+    <div class="search-results" id="searchResults">
+        <h2>搜索结果：<span id="searchQuery"></span></h2>
+        <!-- 动态生成的搜索结果将在这里显示 -->
+    </div>
+
+    <script>
+        // 从URL获取搜索关键词
+        var urlParams = new URLSearchParams(window.location.search);
+        var searchQuery = urlParams.get('query');
+        document.getElementById('searchQuery').textContent = searchQuery;
+
+        // 模拟搜索结果
+        var results = [
+            { name: '小米14Pro', version: 'OS1.0.50.0.UNBCNXM' },
+            { name: '小米14', version: 'OS1.0.45.0.UNCCNXM' },
+            { name: '小米14T Pro / 红米K70 至尊版', version: 'OS1.0.27.0.UNNCNXM' },
+            { name: '小米14Ultra', version: 'OS1.0.23.0.UNACNXM' }
+        ];
+
+        var resultsDiv = document.getElementById('searchResults');
+        results.forEach(function(result) {
+            if (result.name.toUpperCase().includes(searchQuery.toUpperCase())) {
+                var resultButton = document.createElement('a');
+                resultButton.className = 'result-button';
+                resultButton.textContent = result.name + ' (' + result.version + ')';
+                resultButton.href = 'download.html'; // 假设的下载页面
+                resultsDiv.appendChild(resultButton);
+            }
+        });
+    </script>
+</body>
+</html>
