@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>米Rom下载网站</title>
+    <title>小/红米ROM下载网站</title>
     <style>
         body {
             font-family: Arial, sans-serif; /* 设置字体 */
@@ -17,24 +17,42 @@
             padding: 1rem; /* 内边距 */
             text-align: center; /* 居中对齐 */
         }
-        .search-box {
-            display: flex; /* 弹性盒子 */
-            justify-content: center; /* 主轴居中 */
-            margin: 1rem 0; /* 外边距 */
+        main {
+            padding: 2rem; /* 主内容的内边距 */
         }
-        .search-box input {
-            padding: 0.5rem; /* 内边距 */
-            margin-right: 0.5rem; /* 右边距 */
-            border: 1px solid #ddd; /* 边框 */
+        .accordion {
+            margin-bottom: 1rem; /* 底部外边距 */
+            background-color: #fff; /* 背景颜色 */
             border-radius: 5px; /* 边框圆角 */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* 阴影效果 */
         }
-        .search-box .button {
+        .accordion-title {
+            cursor: pointer; /* 鼠标悬停变为手型 */
+            padding: 1rem; /* 内边距 */
+            border-bottom: 1px solid #ddd; /* 底部边框 */
+            background-color: #f1f1f1; /* 背景颜色 */
+        }
+        .accordion-content {
+            max-height: 0; /* 初始最大高度 */
+            overflow: hidden; /* 隐藏超出部分 */
+            transition: max-height 0.2s ease-out; /* 动画效果 */
+        }
+        .accordion-content.show {
+            max-height: 150px; /* 设置展开后的最大高度 */
+        }
+        .button {
+            display: inline-block; /* 块状元素 */
+            margin: 0.5rem 0; /* 外边距 */
             padding: 0.5rem 1rem; /* 内边距 */
             background-color: #007acc; /* 按钮背景色 */
             color: white; /* 按钮文字颜色 */
-            border: none; /* 无边框 */
+            text-decoration: none; /* 去掉下划线 */
             border-radius: 5px; /* 边框圆角 */
-            cursor: pointer; /* 鼠标悬停变为手型 */
+        }
+        .note {
+            display: block; /* 块状元素 */
+            font-size: 0.9rem; /* 小号字体 */
+            color: #666; /* 字体颜色 */
         }
         footer {
             text-align: center; /* 居中对齐 */
@@ -56,64 +74,62 @@
 </head>
 <body>
     <header>
-        <h1>米Rom下载网站</h1> <!-- 网站标题 -->
-        <div class="search-box">
-            <form action="search_results.html" method="GET">
-                <input type="text" id="searchInput" name="query" placeholder="输入ROM名称，如小米14">
-                <button class="button" type="submit">搜索</button>
-            </form>
-        </div>
+        <h1>小/红米ROM下载网站</h1> 
     </header>
     <main>
         <div class="accordion">
-            <div class="accordion-title">小米数字系列</div> <!-- 手风琴标题 -->
+            <div class="accordion-title">小米数字系列</div>
             <div class="accordion-content">
                 <div>
-                               <a href="https://ultimateota.d.miui.com/OS1.0.50.0.UNBCNXM/shennong_images_OS1.0.50.0.UNBCNXM_20240903.0000.00_14.0_cn_af445ac73a.tgz?t=1729972932&s=03fba490485e1398d52bc121632fc2a3" class="button">小米14Pro</a>
+                               <a href="https://ultimateota.d.miui.com/OS2.0.20.0.VOBCNXM/haotian_images_OS2.0.20.0.VOBCNXM_20241112.0000.00_15.0_cn_6a4a7e6084.tgz?t=1732426536&s=02de37977b5886b0f6c17f6a47a0d09c" class="button">小米15Pro</a>
+                    <span class="note">（OS2.0.20.0.VOBCNXM）</span> <!-- 小米15Pro -->
+                               <a href="https://ultimateota.d.miui.com/OS2.0.20.0.VOCCNXM/dada_images_OS2.0.20.0.VOCCNXM_20241112.0000.00_15.0_cn_64a2e5fdad.tgz?t=1732425957&s=58a75dd15470f01ee513743bd440fd96" class="button">小米15</a>
+                    <span class="note">（OS2.0.20.0.VOCCNXM）</span> <!-- 小米15 -->
+                               <a href="https://ultimateota.d.miui.com/OS1.0.50.0.UNBCNXM/shennong_images_OS1.0.50.0.UNBCNXM_20240903.0000.00_14.0_cn_af445ac73a.tgz?t=1732426723&s=a8a46fd8d3147be23023bfce053e6ba8" class="button">小米14Pro</a>
                     <span class="note">（OS1.0.50.0.UNBCNXM）</span> <!-- 小米14Pro -->
-                               <a href="https://ultimateota.d.miui.com/OS1.0.45.0.UNCCNXM/houji_images_OS1.0.45.0.UNCCNXM_20240801.0000.00_14.0_cn_8eaa10987b.tgz?t=1729972885&s=cfe8ef7659dbe17060bd373ff8d9177b" class="button">小米14</a>
-                    <span class="note">（OS1.0.45.0.UNCCNXM）</span> <!-- 小米14 -->
-                               <a href="https://ultimateota.d.miui.com/OS1.0.27.0.UNNCNXM/rothko_images_OS1.0.27.0.UNNCNXM_20240912.0000.00_14.0_cn_5372a56abd.tgz?t=1729973243&s=b346a8091d87e91e7d9c8a503369ff26" class="button">小米14T Pro / 红米K70 至尊版</a>
-                    <span class="note">（OS1.0.27.0.UNNCNXM）</span> <!-- 小米14T Pro / 红米K70 至尊版 -->
-                               <a href="https://ultimateota.d.miui.com/OS1.0.23.0.UNACNXM/aurora_images_OS1.0.23.0.UNACNXM_20240905.0000.00_14.0_cn_424a9c7e6f.tgz?t=1729973131&s=7467e9525447b5e39fa7c99be2eb894a" class="button">小米14Ultra</a>
-                    <span class="note">（OS1.0.23.0.UNACNXM）</span> <!-- 小米14Ultra -->
-                               <a href="https://ultimateota.d.miui.com/OS1.0.7.0.UNDCNXM/shennong_t_images_OS1.0.7.0.UNDCNXM_20240801.0000.00_14.0_cn_15a5d94034.tgz?t=1729973063&s=e32aade1018200c20f2cdc27a6eeedbe" class="button">小米14Pro 钛金属板</a>
+                               <a href="https://ultimateota.d.miui.com/OS1.0.47.0.UNCCNXM/houji_images_OS1.0.47.0.UNCCNXM_20240903.0000.00_14.0_cn_56fa24a9e3.tgz?t=1732426661&s=9d1a67c6435a29bb6f3e650740e70707" class="button">小米14</a>
+                    <span class="note">（OS1.0.47.0.UNCCNXM）</span> <!-- 小米14 -->
+                               <a href="https://ultimateota.d.miui.com/OS1.0.29.0.UNNCNXM/rothko_images_OS1.0.29.0.UNNCNXM_20241010.0000.00_14.0_cn_13ef5328db.tgz?t=1732426767&s=268c3f1e98ef835943f99f9b0bd1c39c" class="button">小米14T Pro / 红米K70 至尊版</a>
+                    <span class="note">（OS1.0.29.0.UNNCNXM）</span> <!-- 小米14T Pro / 红米K70 至尊版 -->
+                               <a href="https://ultimateota.d.miui.com/OS2.0.6.0.VNACNXM/aurora_images_OS2.0.6.0.VNACNXM_20241108.0000.00_15.0_cn_a3d34c6862.tgz?t=1732426810&s=4c332d986eb739c5b870174cb4eca848" class="button">小米14Ultra</a>
+                    <span class="note">（OS2.0.6.0.VNACNXM）</span> <!-- 小米14Ultra -->
+                               <a href="https://ultimateota.d.miui.com/OS1.0.7.0.UNDCNXM/shennong_t_images_OS1.0.7.0.UNDCNXM_20240801.0000.00_14.0_cn_15a5d94034.tgz?t=1732426868&s=bc7e1cd45ba37e3f84fc235b57cd13bc" class="button">小米14Pro 钛金属板</a>
                     <span class="note">（OS1.0.7.0.UNDCNXM）</span> <!-- 小米14Pro 钛金属版 -->
-                               <a href="https://ultimateota.d.miui.com/OS1.0.22.0.UMLCNXM/corot_images_OS1.0.22.0.UMLCNXM_20240806.0000.00_14.0_cn_863d62019d.tgz?t=1729972665&s=a1b2c389b7b6ba08836295859245a299" class="button">小米13T Pro / 红米K60 至尊版</a>
-                    <span class="note">（OS1.0.22.0.UMLCNXM）</span> <!-- 小米13T Pro / 红米K60 至尊版 -->
-                               <a href="https://ultimateota.d.miui.com/OS1.0.16.0.UMACNXM/ishtar_images_OS1.0.16.0.UMACNXM_20240905.0000.00_14.0_cn_a38b8ce2a6.tgz?t=1729972476&s=69581265588a5509f0d4d09ab6c8b8e5" class="button">小米13Ultra</a>
-                    <span class="note">（OS1.0.16.0.UMACNXM）</span> <!-- 小米13Ultra -->
-                               <a href="https://ultimateota.d.miui.com/OS1.0.14.0.UMCCNXM/fuxi_images_OS1.0.14.0.UMCCNXM_20240911.0000.00_14.0_cn_daf87136d9.tgz?t=1729972177&s=a3a6126743e8c5ade0e276588ccc3881" class="button">小米13</a>
-                    <span class="note">（OS1.0.14.0.UMCCNXM）</span> <!-- 小米13 -->
-                               <a href="https://ultimateota.d.miui.com/OS1.0.12.0.UMBCNXM/nuwa_images_OS1.0.12.0.UMBCNXM_20240911.0000.00_14.0_cn_57763155e4.tgz?t=1729972229&s=d3c63bba8e71580a89a4c4faf169bfba" class="button">小米13Pro</a>
-                    <span class="note">（OS1.0.12.0.UMBCNXM）</span> <!-- 小米13Pro -->
-                               <a href="https://ultimateota.d.miui.com/OS1.0.8.0.ULLCNXM/ziyi_images_OS1.0.8.0.ULLCNXM_20240910.0000.00_14.0_cn_59c4d23fd2.tgz?t=1729971980&s=b1bd40db5e48940b5fce9850c8768028" class="button">小米13 Lite  / 小米Civi 2</a>
-                    <span class="note">（OS1.0.8.0.ULLCNXM）</span> <!-- 小米13 Lite  / 小米Civi 2 -->
-                               <a href="https://ultimateota.d.miui.com/OS1.0.10.0.ULECNXM/unicorn_images_OS1.0.10.0.ULECNXM_20241010.0000.00_14.0_cn_cd766ff0ee.tgz?t=1729971477&s=99aabaf140304e5147a54dfe3a280320" class="button">小米12Pro</a>
-                    <span class="note">（OS1.0.10.0.ULECNXM）</span> <!-- 小米12Pro -->
-                               <a href="https://ultimateota.d.miui.com/OS1.0.9.0.ULGCNXM/daumier_images_OS1.0.9.0.ULGCNXM_20241010.0000.00_14.0_cn_0555d5c99a.tgz?t=1729971395&s=1f3d0a3225bbc3992dd5a8916d09de2e" class="button">小米12Pro天机版</a>
-                    <span class="note">（OS1.0.9.0.ULGCNXM）</span> <!-- 小米12Pro天机版 -->
-                               <a href="https://ultimateota.d.miui.com/OS1.0.8.0.ULFCNXM/diting_images_OS1.0.8.0.ULFCNXM_20240911.0000.00_14.0_cn_451643a94f.tgz?t=1729971770&s=56809d3f56a8f7a520d95ad071d80632" class="button">小米12T Pro / 红米K50 至尊版</a>
-                    <span class="note">（OS1.0.8.0.ULFCNXM）</span> <!--  小米12T Pro / 红米K50 至尊版 -->
-                               <a href="https://ultimateota.d.miui.com/OS1.0.8.0.ULACNXM/thor_images_OS1.0.8.0.ULACNXM_20240904.0000.00_14.0_cn_5c84c9933f.tgz?t=1729971529&s=cfb2c071805022ae1d76bacc1d5f5436" class="button">小米12Ultra</a>
-                    <span class="note">（OS1.0.8.0.ULACNXM）</span> <!-- 小米12Ultra -->
-                               <a href="https://ultimateota.d.miui.com/OS1.0.8.0.ULTCNXM/mayfly_images_OS1.0.8.0.ULTCNXM_20240731.0000.00_14.0_cn_42e92a1bb3.tgz?t=1729971606&s=9667522ceb36a425d626564b610bb762" class="button">小米12s</a>
-                    <span class="note">（OS1.0.8.0.ULTCNXM）</span> <!-- 小米12s -->
-                               <a href="https://ultimateota.d.miui.com/OS1.0.10.0.ULBCNXM/zeus_images_OS1.0.10.0.ULBCNXM_20241010.0000.00_14.0_cn_1aab146765.tgz?t=1729971237&s=5645fd34846e61fa60a203b034654650" class="button">小米12Pro</a>
+                               <a href="https://ultimateota.d.miui.com/OS1.0.23.0.UMLCNXM/corot_images_OS1.0.23.0.UMLCNXM_20240910.0000.00_14.0_cn_869b144c61.tgz?t=1732426930&s=c1d2f7cec4b793726e6e6d1e4bb57589" class="button">小米13T Pro / 红米K60 至尊版</a>
+                    <span class="note">（OS1.0.23.0.UMLCNXM）</span> <!-- 小米13T Pro / 红米K60 至尊版 -->
+                               <a href="https://ultimateota.d.miui.com/OS1.0.17.0.UMACNXM/ishtar_images_OS1.0.17.0.UMACNXM_20241012.0000.00_14.0_cn_838b03875a.tgz?t=1732426967&s=e91aae923058546050cdcdd3017263df" class="button">小米13Ultra</a>
+                    <span class="note">（OS1.0.17.0.UMACNXM）</span> <!-- 小米13Ultra -->
+                               <a href="https://ultimateota.d.miui.com/OS1.0.17.0.UMCCNXM/fuxi_images_OS1.0.17.0.UMCCNXM_20241017.0000.00_14.0_cn_fa74f86bcb.tgz?t=1732427189&s=d3f2e47ced7de24ff413a688a7aad435" class="button">小米13</a>
+                    <span class="note">（OS1.0.17.0.UMCCNXM）</span> <!-- 小米13 -->
+                               <a href="https://ultimateota.d.miui.com/OS1.0.15.0.UMBCNXM/nuwa_images_OS1.0.15.0.UMBCNXM_20241016.0000.00_14.0_cn_dbc9b27183.tgz?t=1732427283&s=121c4edf0303d129f258e4fff0288cb6" class="button">小米13Pro</a>
+                    <span class="note">（OS1.0.15.0.UMBCNXM）</span> <!-- 小米13Pro -->
+                               <a href="https://ultimateota.d.miui.com/OS1.0.9.0.ULLCNXM/ziyi_images_OS1.0.9.0.ULLCNXM_20240929.0000.00_14.0_cn_37e82c69a8.tgz?t=1732427343&s=23839bb0a47f2a2663600668f7a1dd7f" class="button">小米13 Lite  / 小米Civi 2</a>
+                    <span class="note">（OS1.0.9.0.ULLCNXM）</span> <!-- 小米13 Lite  / 小米Civi 2 -->
+                               <a href="https://ultimateota.d.miui.com/OS1.0.10.0.ULBCNXM/zeus_images_OS1.0.10.0.ULBCNXM_20241010.0000.00_14.0_cn_1aab146765.tgz?t=1732427488&s=8f96099de9659a491617263b477bbeae" class="button">小米12Pro</a>
                     <span class="note">（OS1.0.10.0.ULBCNXM）</span> <!-- 小米12Pro -->
-                               <a href="https://ultimateota.d.miui.com/OS1.0.9.0.TLDCNXM/psyche_images_OS1.0.9.0.TLDCNXM_20240903.0000.00_13.0_cn_753cb49684.tgz?t=1729971194&s=50a5a87ab4cbf52b0090327edb3d2874" class="button">小米12x</a>
-                    <span class="note">（OS1.0.9.0.TLDCNXM）</span> <!-- 小米12x -->
-                               <a href="https://ultimateota.d.miui.com/OS1.0.9.0.ULCCNXM/cupid_images_OS1.0.9.0.ULCCNXM_20240924.0000.00_14.0_cn_401359f8b9.tgz?t=1729971143&s=0ecb7e9b43ecf42207ac51bf6842c302" class="button">小米12</a>
-                    <span class="note">（OS1.0.9.0.ULCCNXM）</span> <!-- 小米12 -->
-                               <a href="https://ultimateota.d.miui.com/OS1.0.6.0.UKBCNXM/venus_images_OS1.0.6.0.UKBCNXM_20240927.0000.00_14.0_cn_206aeddc39.tgz?t=1729970070&s=427c99ef254e5311516a30ff762a35dc" class="button">小米11</a>
+                               <a href="https://ultimateota.d.miui.com/OS1.0.10.0.ULGCNXM/daumier_images_OS1.0.10.0.ULGCNXM_20241025.0000.00_14.0_cn_39d52bc875.tgz?t=1732427597&s=571e62886b58f9eb24710b69dcf5bdfd" class="button">小米12Pro天机版</a>
+                    <span class="note">（OS1.0.10.0.ULGCNXM）</span> <!-- 小米12Pro天机版 -->
+                               <a href="https://ultimateota.d.miui.com/OS1.0.10.0.ULFCNXM/diting_images_OS1.0.10.0.ULFCNXM_20241010.0000.00_14.0_cn_b0a5673b16.tgz?t=1732427685&s=680925c132356bd9cac21b93111ffb96" class="button">小米12T Pro / 红米K50 至尊版</a>
+                    <span class="note">（OS1.0.10.0.ULFCNXM）</span> <!--  小米12T Pro / 红米K50 至尊版 -->
+                               <a href="https://ultimateota.d.miui.com/OS1.0.10.0.ULACNXM/thor_images_OS1.0.10.0.ULACNXM_20241015.0000.00_14.0_cn_124d28bcc3.tgz?t=1732427775&s=250b610304d959e886b44745ede1818a" class="button">小米12sUltra</a>
+                    <span class="note">（OS1.0.10.0.ULACNXM）</span> <!-- 小米12sUltra -->
+                               <a href="https://ultimateota.d.miui.com/OS1.0.11.0.ULTCNXM/mayfly_images_OS1.0.11.0.ULTCNXM_20241021.0000.00_14.0_cn_afdd570712.tgz?t=1732427812&s=67657589c1a34fbeb5df8e5df8d07196" class="button">小米12s</a>
+                    <span class="note">（OS1.0.11.0.ULTCNXM）</span> <!-- 小米12s -->
+                               <a href="https://ultimateota.d.miui.com/OS1.0.10.0.ULBCNXM/zeus_images_OS1.0.10.0.ULBCNXM_20241010.0000.00_14.0_cn_1aab146765.tgz?t=1732427854&s=9b8af05e478627e46db464c6f9b1768d" class="button">小米12Pro</a>
+                    <span class="note">（OS1.0.10.0.ULBCNXM）</span> <!-- 小米12Pro -->
+                               <a href="https://ultimateota.d.miui.com/OS1.0.10.0.TLDCNXM/psyche_images_OS1.0.10.0.TLDCNXM_20241010.0000.00_13.0_cn_ee24e7354c.tgz?t=1732427893&s=f5c446a38b00046fd6842b7f13941f7d" class="button">小米12x</a>
+                    <span class="note">（OS1.0.10.0.TLDCNXM）</span> <!-- 小米12x -->
+                               <a href="https://ultimateota.d.miui.com/OS1.0.10.0.ULCCNXM/cupid_images_OS1.0.10.0.ULCCNXM_20241025.0000.00_14.0_cn_14659ab234.tgz?t=1732427930&s=a2c678f373b66cfc134f08e7c927ded1" class="button">小米12</a>
+                    <span class="note">（OS1.0.10.0.ULCCNXM）</span> <!-- 小米12 -->
+                               <a href="https://ultimateota.d.miui.com/OS1.0.6.0.UKBCNXM/venus_images_OS1.0.6.0.UKBCNXM_20240927.0000.00_14.0_cn_206aeddc39.tgz?t=1732427968&s=1bb14c5837673f7490ab68c884723a7a" class="button">小米11</a>
                     <span class="note">（OS1.0.6.0.UKBCNXM）</span> <!-- 小米11 -->
-                               <a href="https://ultimateota.d.miui.com/OS1.0.5.0.UKACNXM/star_images_OS1.0.5.0.UKACNXM_20240827.0000.00_14.0_cn_9538aed41f.tgz?t=1729970398&s=4851a00347520f238de317dcbb526dee" class="button">小米11Pro / Ultra</a>
-                    <span class="note">（OS1.0.5.0.UKACNXM）</span> <!-- 小米11Pro / Ultra -->
-                               <a href="https://ultimateota.d.miui.com/OS1.0.5.0.UKOCNXM/lisa_images_OS1.0.5.0.UKOCNXM_20240912.0000.00_14.0_cn_3965cb8e45.tgz?t=1729970939&s=e76e2b0347adea189b7fc0d8ad8927ab" class="button">小米11青春活力版</a>
-                    <span class="note">（OS1.0.5.0.UKOCNXM）</span> <!-- 小米11青春活力版 -->
-                               <a href="https://ultimateota.d.miui.com/OS1.0.4.0.UKKCNXM/haydn_images_OS1.0.4.0.UKKCNXM_20240912.0000.00_14.0_cn_5e47249679.tgz?t=1729970115&s=8fd463d641b42375dbbde4cfdd1ca04e" class="button">小米11i / 小米11X Pro / 红米K40 Pro / Pro+</a>
-                    <span class="note">（OS1.0.4.0.UKKCNXM）</span> <!-- 小米11i / 小米11X Pro / 红米K40 Pro / Pro+ -->
-                               <a href="https://ultimateota.d.miui.com/V14.0.12.0.TKICNXM/renoir_images_V14.0.12.0.TKICNXM_20231128.0000.00_13.0_cn_d74b22ef14.tgz?t=1729970469&s=77326a8b9df6c2ede5e32f6365262a3c" class="button">小米11青春版</a>
+                               <a href="https://ultimateota.d.miui.com/OS1.0.6.0.UKACNXM/star_images_OS1.0.6.0.UKACNXM_20240929.0000.00_14.0_cn_74b82bf92e.tgz?t=1732428018&s=7066242b3ae5342e66f8d7a9714a43bb" class="button">小米11Pro / Ultra</a>
+                    <span class="note">（OS1.0.6.0.UKACNXM）</span> <!-- 小米11Pro / Ultra -->
+                               <a href="https://ultimateota.d.miui.com/OS1.0.6.0.UKOCNXM/lisa_images_OS1.0.6.0.UKOCNXM_20241010.0000.00_14.0_cn_453f935b4e.tgz?t=1732428072&s=597d6068afdbaeb26715d67f3bd1e232" class="button">小米11青春活力版</a>
+                    <span class="note">（OS1.0.6.0.UKOCNXM）</span> <!-- 小米11青春活力版 -->
+                               <a href="https://ultimateota.d.miui.com/OS1.0.5.0.UKKCNXM/haydn_images_OS1.0.5.0.UKKCNXM_20241014.0000.00_14.0_cn_7b1aa224fc.tgz?t=1732428122&s=5039a8200f00a4e90895fed374b31d3d" class="button">小米11i / 小米11X Pro / 红米K40 Pro / Pro+</a>
+                    <span class="note">（OS1.0.5.0.UKKCNXM）</span> <!-- 小米11i / 小米11X Pro / 红米K40 Pro / Pro+ -->
+                               <a href="https://ultimateota.d.miui.com/V14.0.12.0.TKICNXM/renoir_images_V14.0.12.0.TKICNXM_20231128.0000.00_13.0_cn_d74b22ef14.tgz?t=1732428154&s=2b9cfbafa6ce7e6b7bb8bcd9e0f613d9" class="button">小米11青春版</a>
                     <span class="note">（V14.0.12.0.TKICNXM）</span> <!-- 小米11青春版 -->
                                <a href="https://ultimateota.d.miui.com/OS1.0.5.0.TJACNXM/cmi_images_OS1.0.5.0.TJACNXM_20240605.0000.00_13.0_cn_a06288bc90.tgz?t=1729969623&s=36799aa2e404735e1c3d9335f2be6558" class="button">小米10Pro</a>
                     <span class="note">（OS1.0.5.0.TJACNXM）</span> <!-- 小米10Pro -->
@@ -178,7 +194,7 @@
             </div>
         </div>
 <div class="accordion">
-            <div class="accordion-title">小米Note系列</div> <!-- 手风琴标题 -->
+            <div class="accordion-title">小米Note系列</div> 
             <div class="accordion-content">
                 <div>
                        <a href="https://ultimateota.d.miui.com/V12.0.1.0.PCHCNXM/jason_images_V12.0.1.0.PCHCNXM_20200731.0000.00_9.0_cn_9bf2b14cde.tgz?t=1729967187&s=ad4e66e8feabb5400f20de2111810d29" class="button">小米Note3</a>
@@ -194,9 +210,13 @@
             </div>
         </div>
 <div class="accordion">
-            <div class="accordion-title">小米平板系列</div> <!-- 手风琴标题 -->
+            <div class="accordion-title">小米平板系列</div> 
             <div class="accordion-content">
                 <div>
+                               <a href="https://ultimateota.d.miui.com/OS2.0.7.0.VOYCNXM/muyu_images_OS2.0.7.0.VOYCNXM_20241106.0000.00_15.0_cn_4eeb73204c.tgz?t=1732428361&s=7876b66037e85000ebcf264f25591ff9" class="button">小米平板7Pro</a>
+                    <span class="note">（OS2.0.7.0.VOYCNXM）</span> <!-- 小米平板7Pro -->
+                               <a href="https://ultimateota.d.miui.com/OS2.0.10.0.VOZCNXM/uke_images_OS2.0.10.0.VOZCNXM_20241107.0000.00_15.0_cn_8cc91b608f.tgz?t=1732428238&s=8e1bdfe0c15ab4fb91edcd5863e6cac6" class="button">小米平板7</a>
+                    <span class="note">（OS2.0.10.0.VOZCNXM）</span> <!-- 小米平板7 -->
                                <a href="https://ultimateota.d.miui.com/OS1.0.11.0.UNXCNXM/sheng_images_OS1.0.11.0.UNXCNXM_20240911.0000.00_14.0_cn_3237705170.tgz?t=1729972982&s=8a6d2ac7ed9fd24f3457057fb495357a" class="button">小米平板6s Pro 12.4</a>
                     <span class="note">（OS1.0.11.0.UNXCNXM）</span> <!-- 小米平板6s Pro 12.4 -->
                                <a href="https://ultimateota.d.miui.com/OS1.0.11.0.UMYCNXM/liuqin_images_OS1.0.11.0.UMYCNXM_20240920.0000.00_14.0_cn_d5c06831af.tgz?t=1729972371&s=2b5a7ea0751c50a67878110dfd2407d9" class="button">小米平板6Pro</a>
@@ -226,7 +246,7 @@
             </div>
         </div>
 <div class="accordion">
-            <div class="accordion-title">小米Mix系列</div> <!-- 手风琴标题 -->
+            <div class="accordion-title">小米Mix系列</div> 
             <div class="accordion-content">
                 <div>
                                <a href="https://ultimateota.d.miui.com/OS1.0.13.0.UNICNXM/ruyi_images_OS1.0.13.0.UNICNXM_20240831.0000.00_14.0_cn_206dfbdb09.tgz?t=1729973391&s=a246526ca33ce4f95122016b758144c6" class="button">小米Mix Flip</a>
@@ -274,7 +294,7 @@
             </div>
         </div>
 <div class="accordion">
-            <div class="accordion-title">小米CC系列</div> <!-- 手风琴标题 -->
+            <div class="accordion-title">小米CC系列</div> 
             <div class="accordion-content">
                 <div>
                                <a href="https://ultimateota.d.miui.com/V13.0.4.0.RFDCNXM/tucana_images_V13.0.4.0.RFDCNXM_20220825.0000.00_11.0_cn_0e8c6416d9.tgz?t=1729969457&s=ab0d71a1a705f0d3bb8e02fae2439fc1" class="button">小米CC9Pro/小米Note10</a>
@@ -290,7 +310,7 @@
             </div>
         </div>
 <div class="accordion">
-            <div class="accordion-title">小米Civi系列</div> <!-- 手风琴标题 -->
+            <div class="accordion-title">小米Civi系列</div> 
             <div class="accordion-content">
                 <div>
                                <a href="https://ultimateota.d.miui.com/OS1.0.15.0.UNJCNXM/chenfeng_images_OS1.0.15.0.UNJCNXM_20240909.0000.00_14.0_cn_8daed22104.tgz?t=1729973174&s=c347be55cfc7e00ece80b7ecefc7f44c" class="button">小米Civi 4 Pro</a>
@@ -302,12 +322,25 @@
                                <a href="https://ultimateota.d.miui.com/OS1.0.2.0.TKVCNXM/mona_images_OS1.0.2.0.TKVCNXM_20240218.0000.00_13.0_cn_9db4db06dc.tgz?t=1729971014&s=fc55e9ceba35bc3f398aceb335bbce78" class="button">小米Civi</a>
                     <span class="note">（OS1.0.2.0.TKVCNXM）</span> <!-- 小米Civi -->
     </main>
-    <!-- 简介框 -->
-   <div class="intro-box">
-        <p>欢迎来到米Rom下载网站，我们提供最新最全的小米手机ROM下载服务。</p>
+    
+    <div class="intro-box">
+        <p>tips:这里是简介:欢迎来到小/红米ROM下载网站，这里提供最新最全的小米红米手机ROM下载服务。</p>
     </div>
+    <!-- 页脚 -->
     <footer>
-        <p>版权由 @Charlene 所有 &copy; 2024</p> <!-- 页脚版权信息 -->
+        <p>版权由 @Charlene @零度以下 所有 &copy; 2024-2025</p> 
     </footer>
+
+    <script>
+        // 手风琴效果脚本
+        document.querySelectorAll('.accordion-title').forEach(title => {
+            title.addEventListener('click', function() {
+                const content = this.nextElementSibling; // 获取下一个兄弟元素
+                content.classList.toggle('show'); // 切换内容的显示
+                const isOpen = content.classList.contains('show'); // 检查内容是否展开
+                content.style.maxHeight = isOpen ? content.scrollHeight + "px" : "0"; // 设置最大高度
+            });
+        });
+    </script>
 </body>
 </html>
